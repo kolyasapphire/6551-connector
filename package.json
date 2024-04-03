@@ -1,0 +1,33 @@
+{
+  "name": "6551-connector",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@airstack/node": "0.0.5",
+    "@rainbow-me/rainbowkit": "2.0.4",
+    "@tanstack/react-query": "5.28.14",
+    "@tokenbound/sdk": "0.5.1",
+    "@walletconnect/core": "2.12.0",
+    "@walletconnect/utils": "2.12.0",
+    "@walletconnect/web3wallet": "1.11.0",
+    "next": "14.1.4",
+    "react": "^18",
+    "react-dom": "^18",
+    "viem": "2.9.8",
+    "wagmi": "2.5.18"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "eslint": "^8",
+    "eslint-config-next": "14.1.4",
+    "typescript": "^5"
+  }
+}
