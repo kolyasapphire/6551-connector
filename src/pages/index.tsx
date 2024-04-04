@@ -3,6 +3,7 @@ import { useAccount, useWalletClient } from 'wagmi'
 import { useState, useEffect } from 'react'
 
 import { createWeb3Wallet } from '@/lib/web3WalletClient/Web3WalletClient'
+import { destroyClient } from '@/lib/web3WalletClient/Web3WalletClient'
 
 export default function Home() {
   const account = useAccount()
@@ -10,6 +11,13 @@ export default function Home() {
 
   const [tbaAddress, setTbaAddress] = useState<`0x${string}`>()
   const [wcUri, setWcUri] = useState<string>()
+
+  useEffect(() => {
+    const func = async () => {
+      await destroyClient()
+    }
+    func()
+  }, [])
 
   useEffect(() => {
     const func = async () => {
