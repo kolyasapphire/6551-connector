@@ -41,6 +41,7 @@ export default function Home() {
       <>
         Paste your tokenbound account address:
         <input
+          key="tba"
           onChange={(e) => {
             setTbaAddress(e.target.value as `0x${string}`)
           }}
@@ -54,6 +55,7 @@ export default function Home() {
         Copy the WalletConnect connection string here (WalletConnect & click
         copy button):
         <input
+          key="wc"
           onChange={(e) => {
             setWcUri(e.target.value)
           }}
