@@ -31,7 +31,8 @@ export default function Home() {
   if (!account.address)
     return (
       <>
-        Connect your wallet on the same chain tba is on: <ConnectButton />
+        Connect your wallet on the same chain tba is on (by default it will be
+        Mainnet so switch from the wallet if needed): <ConnectButton />
       </>
     )
 
