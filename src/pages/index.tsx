@@ -56,5 +56,5 @@ export default function Home() {
     )
   }
 
-  return `${tbaAddress} Connected! Now interact with the dApp without closing this tab`
+  return `${tbaAddress} Connected! Now interact with the dApp without closing this tab. For correct operation disable tab energy saving mode in browsers`
 }
