@@ -52,7 +52,7 @@ export default function Home() {
   if (!wcUri) {
     return (
       <>
-        Copy the WalletConnect connection string here (WalletConnect & click
+        Paste the WalletConnect connection string here (WalletConnect & click
         copy button):
         <input
           key="wc"
