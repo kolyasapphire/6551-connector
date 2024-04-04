@@ -28,7 +28,12 @@ export default function Home() {
     func()
   }, [wallet, wcUri, tbaAddress, account.chain])
 
-  if (!account.address) return <ConnectButton />
+  if (!account.address)
+    return (
+      <>
+        Connect your wallet on the same chain tba is on: <ConnectButton />
+      </>
+    )
 
   if (!tbaAddress)
     return (
