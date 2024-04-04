@@ -1,7 +1,6 @@
 import { ConnectButton } from '@rainbow-me/rainbowkit'
 import { useAccount, useWalletClient } from 'wagmi'
 import { useState, useEffect } from 'react'
-import { useAccounts } from '@/hooks/useAccounts'
 
 import { createWeb3Wallet } from '@/lib/web3WalletClient/Web3WalletClient'
 
@@ -11,11 +10,6 @@ export default function Home() {
 
   const [tbaAddress, setTbaAddress] = useState<`0x${string}`>()
   const [wcUri, setWcUri] = useState<string>()
-
-  const tbas = useAccounts({
-    owner: account.address,
-    chain: account.chain?.name.toLowerCase(),
-  })
 
   useEffect(() => {
     const func = async () => {
@@ -28,21 +22,15 @@ export default function Home() {
 
   if (!account.address) return <ConnectButton />
 
-  if (tbas && !tbaAddress)
+  if (!tbaAddress)
     return (
       <>
-        Choose your tokenbound account:
-        {tbas.data?.map((x) => (
-          <div key={x.id}>
-            <button
-              onClick={() => {
-                setTbaAddress(x?.address.addresses[0])
-              }}
-            >
-              {x?.address.addresses[0]}
-            </button>
-          </div>
-        ))}
+        Paste your tokenbound account address:
+        <input
+          onChange={(e) => {
+            setTbaAddress(e.target.value as `0x${string}`)
+          }}
+        />
       </>
     )
 
