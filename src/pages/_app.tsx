@@ -12,7 +12,7 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { WALLETCONNECT_PROJECT_ID_DAPP } from '@/constants'
 
 const wagmiConfig = getDefaultConfig({
-  appName: 'App',
+  appName: '6551 Connector',
   projectId: WALLETCONNECT_PROJECT_ID_DAPP!,
   chains: [mainnet, sepolia],
   ssr: true,
